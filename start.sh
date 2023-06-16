@@ -3,8 +3,8 @@
 while true; do
     clear
     echo "0. Проверка и установка програмного обеспечения"
-    echo "1. Выполнить первую часть контрольной работы"
-    echo "2. Выполнить вторую часть контрольной работы"
+    echo "1. Ubuntu. Выполнить первую часть контрольной работы"
+    echo "2. Java. Выполнить вторую часть контрольной работы"
     echo "3. Удалить результаты заданий"
     echo "4. Справка"
     echo "5. Завершить скрипт"
@@ -24,15 +24,9 @@ while true; do
             else
             echo 'Пакет java уже установлен.'
             fi
-            if ! [ -x "$(command -v mvn)" ]; then
-            echo 'Пакет maven не установлен. Установка...' >&2
-            sudo apt install -f maven
-            else
-            echo 'Пакет maven уже установлен.'
-            fi
             ;;
         1)  clear && echo "Выполнение первой части контрольной работы..." && sleep 3
-            ./linux.sh
+            bash linux.sh
             ;;
         2)  clear && echo "Выполнение второй части контрольной работы..." && sleep 3
             javac java/src/main/java/ru/toys/*.java

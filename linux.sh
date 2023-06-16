@@ -31,4 +31,4 @@ echo "*/3 * * * * date >> ~/date" >> ~/tmp
 crontab ~/tmp
 rm ~/tmp
 crontab -l
-
+read -p "Нажмите любую клавишу для выхода ..."

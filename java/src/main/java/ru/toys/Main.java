@@ -74,6 +74,7 @@ public class Main {
                     String id = scanner.nextLine();
 
                     while (true) {
+                        cls();
                         System.out.println("1. Поменять вес игрушки");
                         System.out.println("2. Удалить игрушку");
                         System.out.println("3. Изменить имя игрушки");
@@ -113,6 +114,7 @@ public class Main {
 
                     break;
                 case 9:
+                    cls();
                     String prizeId = store.getPrize();
                     if (prizeId != null) {
                         String prizeName = store.stringToy(prizeId);
@@ -124,7 +126,9 @@ public class Main {
                     } else {
                         System.err.println("Ошибка при получении приза");
                     }
-
+                    store.delToy(prizeId);
+                    System.out.print("Введите 0, для возврата: ");
+                    choice = scanner.nextInt();
                     break;
                 case 0:
                     scanner.close();
