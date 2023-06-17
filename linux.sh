@@ -31,5 +31,8 @@ echo "*/3 * * * * date >> ~/date" >> ~/tmp
 if command -v crontab > /dev/null; then crontab ~/tmp; else echo "Нет crontab"
 rm ~/tmp
 if command -v crontab > /dev/null; then crontab -l; else echo "Нет crontab"
-read -p "Нажмите любую клавишу для выхода ..."
+read -p "Нажмите любую клавишу для выхода ..." end
+echo end
+
+
 
