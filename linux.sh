@@ -28,9 +28,9 @@ if command -v snap > /dev/null; then sudo snap remove powershell; else echo "Н�
 
 echo "8. Добавить произвольную задачу для выполнения каждые 3 минуты (Например, запись в текстовый файл чего-то или копирование из каталога А в каталог Б)." && sleep 3
 echo "*/3 * * * * date >> ~/date" >> ~/tmp
-if command -v crontab > /dev/null; then crontab ~/tmp; else echo "Нет crontab"
+if command -v crontab > /dev/null; then crontab ~/tmp; else echo "Нет crontab"; fi
 rm ~/tmp
-if command -v crontab > /dev/null; then crontab -l; else echo "Нет crontab"
+if command -v crontab > /dev/null; then crontab -l; else echo "Нет crontab"; fi
 read -p "Нажмите любую клавишу для выхода ..." end
 echo end
 
